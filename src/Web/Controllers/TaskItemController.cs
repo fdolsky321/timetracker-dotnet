@@ -23,37 +23,6 @@ namespace TimetrackerWebApp.Controllers
             _taskItemRepository = taskItemRepository;
         }
 
-        /*public async Task<IActionResult> Index() 
-        {
-            var taskItems = await _taskItemRepository.ListAllAsync();
-            return View(taskItems);
-        }
-        */
-
-        
-
-        /*
-        [HttpGet]
-        public async Task<IActionResult> Index()
-        {
-            List<TaskItemViewModel> model = new List<TaskItemViewModel>();
-            var tasks = await _taskItemRepository.ListAllAsync();
-            foreach (var t in tasks)
-            {
-                TaskItemViewModel taskItem = new TaskItemViewModel
-                {
-                    Id = t.Id,
-                    Name = t.Name,
-                    Category = t.Category,
-                    StartDateTime = t.StartDateTime,
-                    EndDateTime = t.EndDateTime
-                };
-                model.Add(taskItem);
-            }
-            return View(model);
-        }
-        */
-
         [HttpGet]
         public async Task<IActionResult> Index(string sortOrder)
         {
